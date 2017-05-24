@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Diagnosis facility:</strong>
+  <%= @diagnosis_facility.diagnosis_facility_id %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @diagnosis_facility.location_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @diagnosis_facility.name %>
+</p>
+
+<%= link_to 'Edit', edit_diagnosis_facility_path(@diagnosis_facility) %> |
+<%= link_to 'Back', diagnosis_facilities_path %>

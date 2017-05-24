@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Condition Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @condition_categories.each do |condition_category| %>
+      <tr>
+        <td><%= condition_category.name %></td>
+        <td><%= link_to 'Show', condition_category %></td>
+        <td><%= link_to 'Edit', edit_condition_category_path(condition_category) %></td>
+        <td><%= link_to 'Destroy', condition_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Condition category', new_condition_category_path %>

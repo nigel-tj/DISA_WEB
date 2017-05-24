@@ -1,0 +1,123 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'gentelella',
+1 verbose cli   '--save' ]
+2 info using npm@2.15.11
+3 info using node@v4.8.3
+4 verbose install initial load of /home/ubuntu/work/DISA_WEB/package.json
+5 verbose readDependencies loading dependencies from /home/ubuntu/work/DISA_WEB/package.json
+6 silly cache add args [ 'gentelella', null ]
+7 verbose cache add spec gentelella
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'gentelella',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'gentelella',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed gentelella@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for gentelella
+11 info addNameTag [ 'gentelella', 'latest' ]
+12 silly mapToRegistry name gentelella
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'gentelella',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'gentelella',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/gentelella
+17 verbose addNameTag registry:https://registry.npmjs.org/gentelella not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/gentelella
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 8:31:37 PM
+21 verbose request id a6fd4a6d384e43e2
+22 verbose etag W/"58f8ca43-263c"
+23 verbose lastModified Thu, 20 Apr 2017 14:48:35 GMT
+24 http request GET https://registry.npmjs.org/gentelella
+25 info retry will retry, error on last attempt: Error: connect EHOSTUNREACH 198.18.1.76:443
+26 info attempt registry request try #2 at 8:32:02 PM
+27 verbose etag W/"58f8ca43-263c"
+28 verbose lastModified Thu, 20 Apr 2017 14:48:35 GMT
+29 http request GET https://registry.npmjs.org/gentelella
+30 info retry will retry, error on last attempt: Error: connect EHOSTUNREACH 198.18.1.76:443
+31 info attempt registry request try #3 at 8:33:17 PM
+32 verbose etag W/"58f8ca43-263c"
+33 verbose lastModified Thu, 20 Apr 2017 14:48:35 GMT
+34 http request GET https://registry.npmjs.org/gentelella
+35 silly get cb [ 304, undefined ]
+36 verbose etag https://registry.npmjs.org/gentelella from cache
+37 verbose get saving gentelella to /home/ubuntu/.npm/registry.npmjs.org/gentelella/.cache.json
+38 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
+39 silly addNameTag next cb for gentelella with tag latest
+40 silly addNamed gentelella@1.3.0
+41 verbose addNamed "1.3.0" is a plain semver version for gentelella
+42 silly mapToRegistry name gentelella
+43 silly mapToRegistry using default registry
+44 silly mapToRegistry registry https://registry.npmjs.org/
+45 silly mapToRegistry data Result {
+45 silly mapToRegistry   raw: 'gentelella',
+45 silly mapToRegistry   scope: null,
+45 silly mapToRegistry   name: 'gentelella',
+45 silly mapToRegistry   rawSpec: '',
+45 silly mapToRegistry   spec: 'latest',
+45 silly mapToRegistry   type: 'tag' }
+46 silly mapToRegistry uri https://registry.npmjs.org/gentelella
+47 verbose addRemoteTarball https://registry.npmjs.org/gentelella/-/gentelella-1.3.0.tgz not in flight; adding
+48 verbose addRemoteTarball [ 'https://registry.npmjs.org/gentelella/-/gentelella-1.3.0.tgz',
+48 verbose addRemoteTarball   '53c4bb0671abd3a4bbb97cfd8261003b6da7c5e3' ]
+49 info retry fetch attempt 1 at 8:33:33 PM
+50 info attempt registry request try #1 at 8:33:33 PM
+51 http fetch GET https://registry.npmjs.org/gentelella/-/gentelella-1.3.0.tgz
+52 info retry will retry, error on last attempt: Error: connect EHOSTUNREACH 198.18.1.76:443
+53 info attempt registry request try #2 at 8:33:48 PM
+54 http fetch GET https://registry.npmjs.org/gentelella/-/gentelella-1.3.0.tgz
+55 info retry will retry, error on last attempt: Error: connect EHOSTUNREACH 198.18.1.76:443
+56 info attempt registry request try #3 at 8:34:53 PM
+57 http fetch GET https://registry.npmjs.org/gentelella/-/gentelella-1.3.0.tgz
+58 error fetch failed https://registry.npmjs.org/gentelella/-/gentelella-1.3.0.tgz
+59 warn retry will retry, error on last attempt: Error: connect EHOSTUNREACH 198.18.1.76:443
+60 info retry fetch attempt 2 at 8:35:08 PM
+61 info attempt registry request try #1 at 8:35:08 PM
+62 http fetch GET https://registry.npmjs.org/gentelella/-/gentelella-1.3.0.tgz
+63 info retry will retry, error on last attempt: Error: connect EHOSTUNREACH 198.18.1.110:443
+64 info attempt registry request try #2 at 8:35:33 PM
+65 http fetch GET https://registry.npmjs.org/gentelella/-/gentelella-1.3.0.tgz
+66 info retry will retry, error on last attempt: Error: connect EHOSTUNREACH 198.18.1.110:443
+67 info attempt registry request try #3 at 8:36:38 PM
+68 http fetch GET https://registry.npmjs.org/gentelella/-/gentelella-1.3.0.tgz
+69 error fetch failed https://registry.npmjs.org/gentelella/-/gentelella-1.3.0.tgz
+70 warn retry will retry, error on last attempt: Error: connect EHOSTUNREACH 198.18.1.110:443
+71 info retry fetch attempt 3 at 8:37:43 PM
+72 info attempt registry request try #1 at 8:37:43 PM
+73 http fetch GET https://registry.npmjs.org/gentelella/-/gentelella-1.3.0.tgz
+74 info retry will retry, error on last attempt: Error: connect EHOSTUNREACH 198.18.1.151:443
+75 info attempt registry request try #2 at 8:37:58 PM
+76 http fetch GET https://registry.npmjs.org/gentelella/-/gentelella-1.3.0.tgz
+77 info retry will retry, error on last attempt: Error: connect EHOSTUNREACH 198.18.1.151:443
+78 info attempt registry request try #3 at 8:39:03 PM
+79 http fetch GET https://registry.npmjs.org/gentelella/-/gentelella-1.3.0.tgz
+80 error fetch failed https://registry.npmjs.org/gentelella/-/gentelella-1.3.0.tgz
+81 verbose stack Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+81 verbose stack     at errnoException (dns.js:27:10)
+81 verbose stack     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:78:26)
+82 verbose cwd /home/ubuntu/work/DISA_WEB
+83 error Linux 4.4.0-78-generic
+84 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "gentelella" "--save"
+85 error node v4.8.3
+86 error npm  v2.15.11
+87 error code ENOTFOUND
+88 error errno ENOTFOUND
+89 error syscall getaddrinfo
+90 error network getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+90 error network This is most likely not a problem with npm itself
+90 error network and is related to network connectivity.
+90 error network In most cases you are behind a proxy or have bad network settings.
+90 error network
+90 error network If you are behind a proxy, please make sure that the
+90 error network 'proxy' config is set properly.  See: 'npm help config'
+91 verbose exit [ 1, true ]
