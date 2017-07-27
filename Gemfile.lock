@@ -69,6 +69,10 @@ GEM
     execjs (2.7.0)
     font-awesome-rails (4.7.0.2)
       railties (>= 3.2, < 5.2)
+    geokit (1.11.0)
+    geokit-rails (2.2.0)
+      geokit (~> 1.5)
+      rails (>= 3.0)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     http-cookie (1.0.3)
@@ -201,6 +205,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   font-awesome-rails
+  geokit-rails
   jbuilder (~> 2.0)
   jquery-rails
   mysql

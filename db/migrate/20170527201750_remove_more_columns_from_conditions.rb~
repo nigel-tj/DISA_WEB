@@ -1,0 +1,4 @@
+class RemoveMoreColumnsFromConditions < ActiveRecord::Migration
+  def change
+  end
+end

@@ -8,6 +8,10 @@ class ConditionsController < ApplicationController
     @conditions = Condition.all
   end
 
+  def index_tiles
+    @conditions = Condition.all
+  end
+
   # GET /conditions/1
   # GET /conditions/1.json
   def show
@@ -19,6 +23,7 @@ class ConditionsController < ApplicationController
   def new
     @condition = Condition.new
     @categories = ConditionCategory.all
+    @diagnosis_facilities = DiagnosisFacility.all
   end
 
   # GET /conditions/1/edit

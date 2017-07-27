@@ -26,7 +26,7 @@
 	<p id="notice"><%= notice %></p>
 	
 
-	<h1>Listing Conditions</h1>
+	<h1>Listing Patients</h1>
 
         <div class="x_content">
           <p class="text-muted font-13 m-b-30">
@@ -34,7 +34,7 @@
           </p>
           <table id="datatable-fixed-header" class="table table-striped table-bordered">
             <thead>
-              <th>Condition category</th>
+              <th>Patient category</th>
 	      <th>Diagnosis date</th>
 	      <th>Name</th>
 	      <th>Diagnosis facilty</th>
@@ -44,17 +44,14 @@
             </thead>
 
             <tbody>
-              <% @conditions.each do |condition| %>
+              <% @patients.each do |patient| %>
 	      <tr>
-		<td><%= condition.condition_category_id %></td>
-		<td><%= condition.diagnosis_date %></td>
-		<td><%= condition.name %></td>
-		<td><%= condition.diagnosis_facilty_id %></td>
-		<td><%= condition.patient_age %></td>
-		<td><%= condition.gender %></td>
-		<td><%= link_to 'Show', condition %></td>
-		<td><%= link_to 'Edit', edit_condition_path(condition) %></td>
-		<td><%= link_to 'Destroy', condition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<td><%= patient.created_at %></td>
+		<td><%= patient.age %></td>
+		<td><%= patient.gender %></td>
+		<td><%= link_to 'Show', patient %></td>
+		<td><%= link_to 'Edit', edit_patient_path(patient) %></td>
+		<td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	      </tr>
 	      <% end %>
             </tbody>
@@ -64,7 +61,7 @@
     </div>
     <br>
     
-    <%= link_to 'New Condition', new_condition_path %>
+    <%= link_to 'New Patient', new_patient_path %>
   </div>
 </div>
 

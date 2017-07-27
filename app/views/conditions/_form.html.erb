@@ -3,7 +3,7 @@
   <div class="">
     <div class="page-title">
       <div class="title_left">
-	<h3>Capture form</h3>
+	<h3>Disease Capture form</h3>
       </div>
       
       <div class="title_right">
@@ -71,34 +71,20 @@
 		    [category.name.titleize, category.id] }, 1), {}, { id: 'categories_select' } %>
 	      </div>
 	    </div>
-	    
+
 	    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-	      <%= f.text_field :patient_age, :class=> 'form-control has-feedback-left', :id=> 'inputSuccess4', :placeholder => 'Age' %>
-	      <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
-	    </div>
-	    
-	    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-	      <input name="gender" type="text" class="form-control" id="inputSuccess5" placeholder="Gender">
-	      <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
-	    </div>
-	    
-	    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-	      <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Diagnosis facility">
-	      <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
-	    </div>
-	    
-	    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-	      <div class="control-group">
-		<div class="controls">
-		  <div class="col-md-12 xdisplay_inputx form-group has-feedback">
-		    <input name="diagnosis_date" type="text" class="form-control has-feedback-left" id="single_cal4" placeholder="Date" aria-describedby="inputSuccess2Status4">
-		    <span class="fa fa-calendar-o form-control-feedback right" aria-hidden="true"></span>
-		    <span id="inputSuccess2Status4" class="sr-only">(success)</span>
-		  </div>
-		</div>
+
+	      <div class="col-md-9 col-sm-9 col-xs-12">
+		<%= f.select :diagnosis_facilty_id, options_for_select(@diagnosis_facilties.collect { |facility|
+		    [diagnosis_facilty.name.titleize, diagnosis_facilty_id] }, 1), {}, { id: 'diagnosis_facilty_select' } %>
 	      </div>
 	    </div>
 	    
+	    <!-- <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback"> -->
+	    <!--   <input name="" type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Diagnosis facility"> -->
+	    <!--   <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span> -->
+	    <!-- </div> -->
+	    	    
 	    <div class="ln_solid"></div>
 	    <div class="form-group">
 	      <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
@@ -116,33 +102,3 @@
 </div>
 <!-- /page content -->
 
-<!--Test Page specific JS -->
-<!-- <script> alert ('Test Page specific JS')</script> -->
-<script>
-  $(document).ready(function() {
-  $('#single_cal1').daterangepicker({
-  singleDatePicker: true,
-  singleClasses: "picker_1"
-  }, function(start, end, label) {
-  console.log(start.toISOString(), end.toISOString(), label);
-  });
-  $('#single_cal2').daterangepicker({
-  singleDatePicker: true,
-  singleClasses: "picker_2"
-  }, function(start, end, label) {
-  console.log(start.toISOString(), end.toISOString(), label);
-  });
-  $('#single_cal3').daterangepicker({
-  singleDatePicker: true,
-  singleClasses: "picker_3"
-  }, function(start, end, label) {
-  console.log(start.toISOString(), end.toISOString(), label);
-  });
-  $('#single_cal4').daterangepicker({
-  singleDatePicker: true,
-  singleClasses: "picker_4"
-  }, function(start, end, label) {
-  console.log(start.toISOString(), end.toISOString(), label);
-  });
-  });
-</script>
