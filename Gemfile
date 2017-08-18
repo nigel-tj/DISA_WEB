@@ -48,13 +48,13 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
+gem 'json', '>= 1.8'
 gem 'therubyracer', :platform => :ruby
 gem 'devise'
 gem 'schema_to_scaffold'
-#gem 'activerecord-mysql2-adapter'
+gem 'activerecord-mysql2-adapter'
 #gem 'mysql'
-gem 'mysql2', '~> 0.3.11'
+gem 'mysql2'
 gem 'yaml_db'
 gem "twitter-bootstrap-rails"
 gem 'rest-client'
