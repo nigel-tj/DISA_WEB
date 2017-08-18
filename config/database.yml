@@ -31,6 +31,6 @@ development:
   reconnect: false
   database: DISA
   pool: 5
-  username: root
-  password: ubuntu10
+  username: nigel
+  password: passwd
   

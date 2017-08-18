@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -49,11 +49,12 @@ group :development do
   gem 'spring'
 end
 
-
+gem 'therubyracer', :platform => :ruby
 gem 'devise'
 gem 'schema_to_scaffold'
-gem 'mysql'
-gem 'mysql2', '~> 0.3.18'
+#gem 'activerecord-mysql2-adapter'
+#gem 'mysql'
+gem 'mysql2', '~> 0.3.11'
 gem 'yaml_db'
 gem "twitter-bootstrap-rails"
 gem 'rest-client'

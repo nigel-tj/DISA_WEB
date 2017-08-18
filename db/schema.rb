@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -13,60 +12,58 @@
 
 ActiveRecord::Schema.define(version: 20170527201750) do
 
-  create_table "admins", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
+  create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.index ["email"], name: "index_admins_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
-  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
-
-  create_table "condition_categories", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-  create_table "conditions", force: :cascade do |t|
-    t.integer  "condition_category_id", limit: 4
-    t.string   "name",                  limit: 255
-    t.integer  "diagnosis_facilty_id",  limit: 4
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
-  end
-
-  create_table "diagnosis_facilities", force: :cascade do |t|
-    t.integer  "diagnosis_facility_id", limit: 4
-    t.integer  "location_id",           limit: 4
-    t.string   "name",                  limit: 255
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
-  end
-
-  create_table "homes", force: :cascade do |t|
+  create_table "condition_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "patients", force: :cascade do |t|
-    t.string   "gender",       limit: 1
-    t.integer  "age",          limit: 4
-    t.integer  "condition_id", limit: 4
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+  create_table "conditions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "condition_category_id"
+    t.string   "name"
+    t.integer  "diagnosis_facilty_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
-  add_index "patients", ["condition_id"], name: "index_patients_on_condition_id", using: :btree
+  create_table "diagnosis_facilities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "diagnosis_facility_id"
+    t.integer  "location_id"
+    t.string   "name"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  create_table "homes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "patients", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "gender",       limit: 1
+    t.integer  "age"
+    t.integer  "condition_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["condition_id"], name: "index_patients_on_condition_id", using: :btree
+  end
 
   add_foreign_key "patients", "conditions"
 end
