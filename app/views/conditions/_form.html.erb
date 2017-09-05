@@ -75,8 +75,8 @@
 	    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
 
 	      <div class="col-md-9 col-sm-9 col-xs-12">
-		<%= f.select :diagnosis_facilty_id, options_for_select(@diagnosis_facilties.collect { |facility|
-		    [diagnosis_facilty.name.titleize, diagnosis_facilty_id] }, 1), {}, { id: 'diagnosis_facilty_select' } %>
+		<%= f.select :diagnosis_facilty_id, options_for_select(@diagnosis_facilities.collect { |facility|
+		    [facility.name.titleize, :diagnosis_facility_id] }, 1), {}, { id: 'diagnosis_facility_select' } %>
 	      </div>
 	    </div>
 	    
